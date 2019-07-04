@@ -1,0 +1,308 @@
+:root {
+    --cardinal: #500000;
+    --very-light-gray: #F1F1F1;
+    --light-gray: #C2C0BF;
+    --dark-gray: #8A8B8C
+}
+
+body {
+    /* font-family: Tahoma, helvetica neue, Ubuntu, Arial, PingFang, SimHei, sans-serif; */
+    /* font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif; */
+    font-size: 14px;
+    line-height: 1.8em;
+    color: #000;
+    font-weight: 100;
+    background: #fff;
+    margin-top: 50px
+}
+
+body .container,
+body .container-fluid {
+    max-width: 1000px
+}
+
+body .row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0
+}
+
+a {
+    color: #8a0404;
+    text-decoration: none
+}
+
+a:hover {
+    color: var(--cardinal);
+    text-decoration: underline
+}
+
+.section-item {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.section-title {
+    font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 10px
+}
+
+.col-wrapper {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.sec-wrapper {
+    margin-top: -50px;
+    padding-top: 50px;
+    padding-bottom: 30px
+}
+
+nav {
+    background-color: var(--cardinal)
+}
+
+.navbar {
+    padding: 11px 0
+}
+
+.navbar-brand,
+.nav-link {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff
+}
+
+.navbar-toggler {
+    font-size: 14px;
+    padding: 1px 6px
+}
+
+.navbar .container,
+.navbar .container-fluid {
+    padding-right: 30px;
+    padding-left: 30px
+}
+
+.navbar .dropdown-menu {
+    font-size: 14px
+}
+
+@media(max-width:575.98px) {
+    .navbar .nav-item {
+        padding-top: 2px
+    }
+    .navbar .dropdown-item {
+        padding-top: 1px;
+        padding-bottom: 1px
+    }
+}
+
+.home-wrapper {
+    padding-top: 70px
+}
+
+.home-wrapper .picture img {
+    width: 100%
+}
+
+@media(min-width:576px) {
+    .home-wrapper .picture img {
+        max-width: 200px
+    }
+}
+
+.home-wrapper .description {
+    padding-top: 30px
+}
+
+.home-wrapper .description .name {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+}
+
+@media(min-width:576px) {
+    .home-wrapper .description {
+        padding-top: 0;
+        padding-left: calc(20px + 5%)
+    }
+}
+
+.home-wrapper .social-icon {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+    display: block
+}
+
+.home-wrapper .social-icon li {
+    display: inline-block;
+    margin: 0 2px
+}
+
+.home-wrapper .social-icon li a {
+    display: block;
+    color: #000;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 2px;
+    border: 2px solid var(--very-light-gray)
+}
+
+.home-wrapper .social-icon li a:hover {
+    border-color: var(--light-gray)
+}
+
+.home-wrapper .interests {
+    padding-top: 20px;
+    margin-bottom: -20px
+}
+
+@media(min-width:992px) {
+    .home-wrapper .interests {
+        padding-top: 0;
+        margin-bottom: 0
+    }
+}
+
+.pub-wrapper .title a {
+    color: #000;
+    font-weight: 600;
+    font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 18px
+}
+
+.pub-wrapper .title a:hover {
+    color: #000
+}
+
+.pub-wrapper .authors {
+    color: var(--light-gray)
+}
+
+.pub-wrapper .authors a {
+    color: var(--light-gray);
+    text-decoration: underline
+}
+
+.pub-wrapper .authors a:hover {
+    color: var(--dark-gray)
+}
+
+.pub-wrapper .authors me {
+    color: #000
+}
+
+.pub-wrapper .figure img {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%
+}
+
+@media(max-width:767.98px) {
+    .pub-wrapper .figure {
+        display: none
+    }
+}
+
+.exp-wrapper .title a {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+}
+
+.exp-wrapper a,
+.exp-wrapper a:hover {
+    color: #000
+}
+
+.exp-wrapper .info {
+    line-height: 20px
+}
+
+.exp-wrapper .figure {
+    text-align: center;
+    margin: auto;
+    display: none
+}
+
+.exp-wrapper .fig-square .figure {
+    text-align: right
+}
+
+.exp-wrapper .figure img {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 250px
+}
+
+.exp-wrapper .fig-square .figure img {
+    max-width: 120px
+}
+
+@media(min-width:576px) {
+    .exp-wrapper .figure {
+        display: block
+    }
+}
+
+@media(min-width:576px) and (max-width:991.98px) {
+    .exp-wrapper .fig-wide {
+        display: none
+    }
+    .exp-wrapper .fig-square {
+        display: block
+    }
+}
+
+@media(min-width:992px) {
+    .exp-wrapper .fig-wide {
+        display: block
+    }
+    .exp-wrapper .fig-square {
+        display: none
+    }
+}
+
+.exp-wrapper time {
+    font-size: 14px
+}
+
+@media(min-width:768px) {
+    .exp-wrapper time {
+        text-align: center;
+        display: block
+    }
+}
+
+@media(max-width:767.98px) {
+    .exp-wrapper .location {
+        display: none
+    }
+}
+
+.exp-wrapper .location {
+    color: var(--light-gray)
+}
