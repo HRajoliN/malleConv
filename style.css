@@ -1,5 +1,5 @@
 :root {
-    --cardinal: #500000;
+    --cardinal: #bf5700;
     --very-light-gray: #F1F1F1;
     --light-gray: #C2C0BF;
     --dark-gray: #8A8B8C
@@ -8,6 +8,7 @@
 body {
     /* font-family: Tahoma, helvetica neue, Ubuntu, Arial, PingFang, SimHei, sans-serif; */
     /* font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif; */
+    font-family: "LibreFrank",Arial,Helvetica,sans-serif;
     font-size: 14px;
     line-height: 1.8em;
     color: #000;
