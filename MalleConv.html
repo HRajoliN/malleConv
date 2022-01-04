@@ -37,7 +37,7 @@
   <br>
   <p><img src="./MalleConv/difference.png" style="margin:auto;max-width:100%" align="middle"></p>
   <div class="text" style="text-align: left;">
-      <p>We propose a novel Interpretability-Aware REDundancy REDuction (IA-RED<sup>2</sup>) framework for reducing the redundancy of vision transformers. The key mechanism that IA-RED<sup>2</sup> uses to increase efficiency is to dynamically drop some less informative patches in the original input sequence so that the length of the input sequence could be reduced. While the original vision transformer tokenizes all of the input patches, it neglects the fact that some of the input patches are redundant and such redundancy is input-dependant (see from Figure). We leverage the idea of dynamic inference, and adopt a policy network (referred to as <strong>multi-head interpreter</strong>) to decide which patches are uninformative and then discard them. Our proposed method is inherently interpretability-aware as the policy network learns to discriminate which region is crucial for the final prediction results.</p>
+      <p>Many image processing networks apply a single set of static convolutional kernels across the entire input image, which is sub-optimal for natural images, as they often consist of heterogeneous visual patterns. Recent works in classification, segmentation, and image restoration have demonstrated that dynamic kernels outperform static kernels at modeling local image statistics. However, these works often adopt per-pixel convolution kernels, which introduce high memory and computation costs. To achieve spatial-varying processing without significant overhead, we present Malleable Convolution (MalleConv), as an efficient variant of dynamic convolution. The weights of MalleConv are dynamically produced by an efficient predictor network capable of generating content-dependent outputs at specific spatial locations. Unlike previous works, MalleConv generates a much smaller set of spatially-varying kernels from input, which enlarges the network's receptive field and significantly reduces computational and memory costs. These kernels are then applied to a full-resolution feature map through an efficient slice-and-conv operator with minimum memory overhead. We further build an efficient denoising network using MalleConv, coined as MalleNet. It achieves high quality results without very deep architecture, e.g., reaching 8.91x faster speed compared to the best performed denoising algorithms (SwinIR), while maintaining similar performance. We also show that a single MalleConv added to a standard convolution-based backbone can contribute significantly to reducing the computational cost or boosting image quality at a similar cost. Project page: https://yifanjiang.net/MalleConv.html</p>
   </div>
 </div>
 
@@ -54,7 +54,7 @@
 </div> -->
 
 <!-- <br> -->
-
+<!-- 
 <div class="container">
     <h2>Method</h2>
       <img class="img_responsive" src="./MalleConv/arch_iared.png" alt="Teaser" style="margin:auto;max-width:80%;align=center">
@@ -105,7 +105,7 @@ B. Pan and Y. Jiang and R. Panda and Z. Wang and R. Feris and A. Oliva. <strong>
     <div class="overview">
     <p>
       We thank IBM for the donation to MIT of the Satori GPU cluster. This work is supported by the MIT-IBM Watson AI Lab and its member companies, Nexplore and Woodside.
-<br>
+<br> -->
 
 
 </p></div></div><br>
