@@ -1,1 +1,113 @@
-hello world
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)http://people.csail.mit.edu/bpan/ia-red/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__ceyuan_me"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>IA-RED</title>
+
+  <link rel="stylesheet" href="./MalleConv/bootstrap.min.css">
+  <link href="./MalleConv/css" rel="stylesheet" type="text/css">
+  <link href="./MalleConv/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body data-gr-c-s-loaded="true" data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed="">
+
+<div class="container">
+  <table border="0" align="center">
+    <tbody><tr>
+      <td width="1500" align="center" valign="middle">
+      <span class="title"><h1>Fast and High-quality Image Denoising via Malleable Convolutions</h1></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><h3>
+            <a href="https://yifanjiang.net/" target="_blank">Yifan Jiang<sup>1, 2</sup></a>, 
+            <a href="https://bartwronski.com/" target="_blank">Bart Wronski<sup>1</sup></a>, 
+            <a href="https://bmild.github.io/" target="_blank">Ben Mildenhall<sup>1</sup></a>, 
+            <a href="https://jonbarron.info/" target="_blank">Jon Barron<sup>1</sup></a>, 
+            <a href="https://spark.adobe.com/page/CAdrFMJ9QeI2y/" target="_blank">Zhangyang Wang<sup>2</sup></a>
+            <a href="https://people.csail.mit.edu/tfxue/" target="_blank">Tianfan Xue<sup>1</sup></a>
+        </h3></td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><h3> <sup>1</sup> Google Research, &nbsp;  <sup>2</sup> UT Austin </h3> </td>
+    </tr>
+    <tr>
+        <td colspan="3" align="center"><h3> <a href="https://arxiv.org/pdf/2201.00392.pdf" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="yifanjiang.net" target="_blank">[Code (coming soon)]</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3></td>
+    </tr>
+  </tbody></table>
+  <br>
+  <p><img src="./MalleConv/difference.png" style="margin:auto;max-width:100%" align="middle"></p>
+  <div class="text" style="text-align: left;">
+      <p>We propose a novel Interpretability-Aware REDundancy REDuction (IA-RED<sup>2</sup>) framework for reducing the redundancy of vision transformers. The key mechanism that IA-RED<sup>2</sup> uses to increase efficiency is to dynamically drop some less informative patches in the original input sequence so that the length of the input sequence could be reduced. While the original vision transformer tokenizes all of the input patches, it neglects the fact that some of the input patches are redundant and such redundancy is input-dependant (see from Figure). We leverage the idea of dynamic inference, and adopt a policy network (referred to as <strong>multi-head interpreter</strong>) to decide which patches are uninformative and then discard them. Our proposed method is inherently interpretability-aware as the policy network learns to discriminate which region is crucial for the final prediction results.</p>
+  </div>
+</div>
+
+<br>
+
+<!-- <div class="container">
+  <h2>Main Idea</h2>
+    <div class="overview">
+    <p>
+      Our main goal is to automatically decide which feature maps to compute for each input video in order to classify it correctly with the minimum computation. The intuition behind our proposed method is that there are many similar feature maps along the temporal and channel dimensions. For each video instance, we estimate the ratio of feature maps that need to be fully computed along the temporal dimension and channel dimension. Then, for the other feature maps, <strong>reconstruct them from those pre-computed feature maps using cheap linear operations</strong>.
+    </p>
+
+    </div>
+</div> -->
+
+<!-- <br> -->
+
+<div class="container">
+    <h2>Method</h2>
+      <img class="img_responsive" src="./MalleConv/arch_iared.png" alt="Teaser" style="margin:auto;max-width:80%;align=center">
+      <div class="pipelines" style="text-align: left;">
+        <p>
+          Illustration of our IA-RED<sup>2</sup> framework. We divide the transformer into D groups. Each group contains a multi-head interpreter and L combinations of the MSA and FFN. Before input to the MSA and FFN, the patch tokens will be evaluated by the multi-head interpreter to drop some uninformative patches. The multi-head interpreters are optimized by reward considering both the efficiency and accuracy.
+        </p>
+      </div>
+</div>
+<br>
+<div class="container">
+  <h2>Qualitative Results of Interpretability-Aware Heatmaps</h2>
+    <img class="img_responsive" src="./MalleConv/qual_heatmap.png" alt="Teaser" style="margin:auto;max-width:100%">
+    <div class="pipelines" style="text-align: left;">
+      <p>
+        Qualitative result of the heatmaps which hightlight the informative region of the input images of <strong>MemNet</strong>, <strong>raw attention</strong> at the second block, and <strong>our method</strong> with DeiT-S model. We find that our method can obviously better interpret the part-level stuff of the objects of interest.
+      </p>
+    </div>
+</div>
+<br>
+<div class="container">
+  <h2>Qualitative Results of Redundancy Reduction</h2>
+    <img class="img_responsive" src="./MalleConv/iared_red.png" alt="Teaser" style="margin:auto;max-width:100%">
+    <div class="pipelines" style="text-align: left;">
+      <p>
+        We visualize the hierarchical redundancy reduction process of our method with the DeiT-S model. The number on the upper-left corner of each image indicates the ratio of the remaining patches. From left to right, we can see that the network drops the redundant patches and focuses more on the high-level features of the objects.
+      </p>
+    </div>
+</div>
+
+
+
+
+<br>
+
+<div class="container">
+  <h2>Reference</h2>
+    <div class="overview">
+    <p>
+B. Pan and Y. Jiang and R. Panda and Z. Wang and R. Feris and A. Oliva. <strong>IA-RED<sup>2</sup>: Interpretability-Aware Redundancy Reduction for Vision Transformer.</strong> arXiv 2021 <a href="http://people.csail.mit.edu/bpan/ia-red/ia-red_files/ia_bib.txt">[Bibtex]</a>
+<br>
+
+
+</p></div></div><br>
+
+<div class="container">
+  <h2>Acknowledgements</h2>
+    <div class="overview">
+    <p>
+      We thank IBM for the donation to MIT of the Satori GPU cluster. This work is supported by the MIT-IBM Watson AI Lab and its member companies, Nexplore and Woodside.
+<br>
+
+
+</p></div></div><br>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
