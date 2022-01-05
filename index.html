@@ -793,9 +793,17 @@ function publicationByTopicInner() {
         var topic = allTopics[topicId].name;
         var topicTitle = allTopics[topicId].title;
         // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
-        $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
-        $("#main-pub-card-container").append($("<div style='margin-top: 70px; font-size: 22px; font-weight: bold'>" + "</div>"));
-        $("#main-pub-card-container").append($("<h5>" + topicTitle  + "</h5>"));
+        
+        if (topicId == 0) {
+            $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
+            $("#main-pub-card-container").append($("<div style='margin-top: 20px; font-size: 22px; font-weight: bold'>" + "</div>"));
+            $("#main-pub-card-container").append($("<h5>" + topicTitle  + "</h5>"));
+        }
+        else{
+            $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
+            $("#main-pub-card-container").append($("<div style='margin-top: 70px; font-size: 22px; font-weight: bold'>" + "</div>"));
+            $("#main-pub-card-container").append($("<h5>" + topicTitle  + "</h5>"));
+        }
         for (var pubId = 0; pubId < allPublications.length; pubId++) {
             var pub = $(allPublications[pubId]);
             if (pub.data("topic").indexOf(topic) != -1) {
