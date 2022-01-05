@@ -369,237 +369,279 @@
         </div>
 
         <div class="sec-wrapper pub-wrapper" id="pub">
-            <div class="container-fluid">
+            <div class="container-fluid" id="main-pub-container">
                 <div class="row">
                     <div class="col col-wrapper">
                         <div class="section-title">Selected Publications</div>
                     </div>
                 </div>
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href="https://arxiv.org/pdf/2201.00392.pdf"><img src="./MalleConv.png" alt="MalleConv"></a>
+                <h5 class="subtitle">
+                    (
+                        <a id="publication-by-selected" href="javascript:;" ,="" onclick="publicationBySelected();" class="activated">show selected</a> /
+                        <a id="publication-by-date" href="javascript:;" ,="" onclick="publicationByDate();" class="">show all by date</a> /
+                        <a id="publication-by-topic" href="javascript:;" ,="" onclick="publicationByTopic();" class="">show all by topic</a>
+                    )
+                    </h5>
+                    <p class="subtitle-aux"><span class="bold">Topics:</span>
+                        <a href="yifanjiang.net/#edu" onclick="return publicationByTopicSpecific(this)" data-topic="Image-Synthesis-and-Processing" class="">Image Synthesis and Processing</a> /
+                        <a href="yifanjiang.net/#topic-AutoML-and-Efficiency" onclick="return publicationByTopicSpecific(this)" data-topic="AutoML-and-Efficiency" class="">AutoML and Efficiency</a> /
+                        <span class="note">(*: indicates equal contribution.)</span>
+                    </p>
+
+            
+                <div id="main-pub-card-container" class="">
+                    <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2022" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://arxiv.org/pdf/2201.00392.pdf"><img src="./MalleConv.png" alt="MalleConv"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                        Fast and High-Quality Image Denoising via Malleable Convolutions
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    <me>Yifan Jiang</me>,
+                                    Bartlomiej Wronski, 
+                                    Ben Mildenhall, 
+                                    Jonathan T. Barron, 
+                                    Zhangyang Wang, 
+                                    Tianfan Xue
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>arxiv preview</i></a></div>
+                                <a href="https://arxiv.org/pdf/2201.00392.pdf">[Paper]</a>
+                                <a href="https://yifanjiang.net/MalleConv.html">[Project]</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                                Fast and High-Quality Image Denoising via Malleable Convolutions
-                                </a>
+                    
+                    <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2021" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://arxiv.org/abs/2102.07074"><img src="./TransGAN.png" alt="TransGAN"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                        TransGAN: Two Pure Transformers Can Make One Strong GAN, and That Can Scale Up
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    <me>Yifan Jiang</me>,
+                                    Shiyu Chang,
+                                    Zhangyang Wang
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>NeurIPS 2021</i></a></div>
+                                <a href="https://arxiv.org/abs/2102.07074">[Paper]</a>
+                                <a href="https://github.com/VITA-Group/TransGAN">[Code]</a>
+                            <!-- </br> -->
+                                <!-- <a>Covered Media:</a> -->
+                                <a href="https://www.youtube.com/watch?v=R5DiLFOMZrc&amp%3Bfeature=youtu.be">[Youtube Video]</a>
+                                <a href="https://www.jiqizhixin.com/articles/2021-02-17">[机器之心]</a>
+                            </br>
+                                <img src="https://img.shields.io/github/stars/VITA-group/TransGAN?style=social"></img>
+                            </div>
                         </div>
-                        <div class="authors">
-                            <me>Yifan Jiang</me>,
-                            Bartlomiej Wronski, 
-                            Ben Mildenhall, 
-                            Jonathan T. Barron, 
-                            Zhangyang Wang, 
-                            Tianfan Xue
+                    </div>
+
+                    <div class="pub-card" data-topic="AutoML-and-Efficiency" data-year="2021" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://arxiv.org/pdf/2106.12620.pdf"><img src="./IA-RED.png" alt="IA-RED^2"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                        IA-RED^2: Interpretability-Aware Redundancy Reduction for Vision Transformers
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    Bowen Pan,
+                                    Rameswar Panda,
+                                    <me>Yifan Jiang</me>, 
+                                    Zhangyang Wang, 
+                                    Rogerio Feris, 
+                                    Aude Oliva
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>NeurIPS 2021</i></a></div>
+                                <a href="https://arxiv.org/pdf/2106.12620.pdf">[Paper]</a>
+                                <a href="http://people.csail.mit.edu/bpan/ia-red/">[Project Page]</a>
+                            </div>
                         </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>arxiv preview</i></a></div>
-                        <a href="https://arxiv.org/pdf/2201.00392.pdf">[Paper]</a>
-                        <a href="https://yifanjiang.net/MalleConv.html">[Project]</a>
+                    </div>
+
+                    <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2021" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href=""><img src="./SSH.png" alt="SSH"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                        SSH: A Self-Supervised Framework for Image Harmonization
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    <me>Yifan Jiang</me>, 
+                                    He Zhang, 
+                                    Jianming Zhang, 
+                                    Yilin Wang, 
+                                    Zhe Lin, 
+                                    Kalyan Sunkavalli, 
+                                    Simon Chen, 
+                                    Sohrab Amirghodsi, 
+                                    Sarah Kong, 
+                                    Zhangyang Wang
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>ICCV 2021</i></a></div>
+                                <a href="https://arxiv.org/pdf/2108.06805.pdf">[Paper]</a>
+                                <a href="https://github.com/VITA-Group/SSHarmonization">[Code]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="AutoML-and-Efficiency" data-year="2021" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://arxiv.org/pdf/2104.10853.pdf"><img src="./InstantNet.png" alt="InstantNet"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                        InstantNet: Automated Generation and Deployment
+                                        of Instantaneously Switchable-Precision Networks
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    Yonggan Fu,
+                                    Zhongzhi Yu,
+                                    Yongan Zhang,
+                                    <me>Yifan Jiang</me>,
+                                    Chaojian Li,
+                                    Yongyuan Liang,
+                                    Mingchao Jiang,
+                                    Zhangyang Wang,
+                                    Yingyan Lin
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>DAC 2021</i></a></div>
+                                <a href="https://arxiv.org/pdf/2104.10853.pdf">[Paper]</a>
+                                <a href="https://github.com/RICE-EIC/InstantNet">[Code]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="AutoML-and-Efficiency" data-year="2021" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://openreview.net/forum?id=GMgHyUPrXa"><img src="./ISTA.png" alt="ISTA"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                            A Design Space Study for LISTA and Beyond
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    Tianjian Meng*,
+                                    Xiaohan Chen*,
+                                    <me>Yifan Jiang</me>,
+                                    Zhangyang Wang
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>ICLR 2021</i></a></div>
+                                <a href="https://openreview.net/forum?id=GMgHyUPrXa">[Paper]</a>
+                                <a href="https://github.com/google-research/google-research/tree/master/lista_design_space">[Code]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2019" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://arxiv.org/abs/1908.03835"><img src="./AutoGAN.png" alt="AutoGAN"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                            AutoGAN: Neural Architecture Search Meets Generative Adversarial Networks
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    Xinyu Gong, Shiyu Chang, <me>Yifan Jiang</me>, Zhangyang Wang
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>ICCV 2019</i></a></div>
+                                <a href="https://arxiv.org/abs/1908.03835">[Paper]</a>
+                                <a href="https://github.com/TAMU-VITA/AutoGAN">[Code]</a>
+                                </br>
+                                <img src="https://img.shields.io/github/stars/VITA-group/AutoGAN?style=social"></img>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2019" data-selected="true">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href=""><img src="./EnlightenGAN.png" alt="EnlightenGAN"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                    EnlightenGAN: Deep Light Enhancement without Paired Supervision
+                                    </a>
+                                </div>
+                                <div class="authors">
+                                    <me>Yifan Jiang</me>, Xinyu Gong, Ding Liu, Yu Cheng, Chen Fang, Xiaohui Shen, Jianchao Yang, Pan Zhou, Zhangyang Wang
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>IEEE Transaction on Image Processing (TIP)</i></a></div>
+                                <a href="https://github.com/yueruchen/EnlightenGAN">[Code]</a>
+                                <a href="https://arxiv.org/abs/1906.06972">[Paper]</a>
+                                </br>
+                                <img src="https://img.shields.io/github/stars/VITA-group/EnlightenGAN?style=social"></img>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href="https://arxiv.org/abs/2102.07074"><img src="./TransGAN.png" alt="TransGAN"></a>
+                <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2019" data-selected="false"></div>
+                    <div class="row align-items-center section-item">
+                        <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                            <div class="figure">
+                                <a href="https://arxiv.org/abs/1804.02047"><img src="./D.png" alt="PS-GAN"></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                                TransGAN: Two Pure Transformers Can Make One Strong GAN, and That Can Scale Up
-                                </a>
-                        </div>
-                        <div class="authors">
-                            <me>Yifan Jiang</me>,
-                            Shiyu Chang,
-                            Zhangyang Wang
-                        </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>NeurIPS 2021</i></a></div>
-                        <a href="https://arxiv.org/abs/2102.07074">[Paper]</a>
-                        <a href="https://github.com/VITA-Group/TransGAN">[Code]</a>
-                    <!-- </br> -->
-                        <!-- <a>Covered Media:</a> -->
-                        <a href="https://www.youtube.com/watch?v=R5DiLFOMZrc&amp%3Bfeature=youtu.be">[Youtube Video]</a>
-                        <a href="https://www.jiqizhixin.com/articles/2021-02-17">[机器之心]</a>
-                    </br>
-                        <img src="https://img.shields.io/github/stars/VITA-group/TransGAN?style=social"></img>
-                    </div>
-                </div>
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href="https://arxiv.org/pdf/2106.12620.pdf"><img src="./IA-RED.png" alt="IA-RED^2"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                                IA-RED^2: Interpretability-Aware Redundancy Reduction for Vision Transformers
-                                </a>
-                        </div>
-                        <div class="authors">
-                            Bowen Pan,
-                            Rameswar Panda,
-                            <me>Yifan Jiang</me>, 
-                            Zhangyang Wang, 
-                            Rogerio Feris, 
-                            Aude Oliva
-                        </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>NeurIPS 2021</i></a></div>
-                        <a href="https://arxiv.org/pdf/2106.12620.pdf">[Paper]</a>
-                        <a href="http://people.csail.mit.edu/bpan/ia-red/">[Project Page]</a>
-                    </div>
-                </div>
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href=""><img src="./SSH.png" alt="SSH"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                                SSH: A Self-Supervised Framework for Image Harmonization
-                                </a>
-                        </div>
-                        <div class="authors">
-                            <me>Yifan Jiang</me>, 
-                            He Zhang, 
-                            Jianming Zhang, 
-                            Yilin Wang, 
-                            Zhe Lin, 
-                            Kalyan Sunkavalli, 
-                            Simon Chen, 
-                            Sohrab Amirghodsi, 
-                            Sarah Kong, 
-                            Zhangyang Wang
-                        </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>ICCV 2021</i></a></div>
-                        <a href="https://arxiv.org/pdf/2108.06805.pdf">[Paper]</a>
-                        <a href="https://github.com/VITA-Group/SSHarmonization">[Code]</a>
-                    </div>
-                </div>
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href="https://arxiv.org/pdf/2104.10853.pdf"><img src="./InstantNet.png" alt="InstantNet"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                                InstantNet: Automated Generation and Deployment
-                                of Instantaneously Switchable-Precision Networks
-                                </a>
-                        </div>
-                        <div class="authors">
-                            Yonggan Fu,
-                            Zhongzhi Yu,
-                            Yongan Zhang,
-                            <me>Yifan Jiang</me>,
-                            Chaojian Li,
-                            Yongyuan Liang,
-                            Mingchao Jiang,
-                            Zhangyang Wang,
-                            Yingyan Lin
-                        </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>DAC 2021</i></a></div>
-                        <a href="https://arxiv.org/pdf/2104.10853.pdf">[Paper]</a>
-                        <a href="https://github.com/RICE-EIC/InstantNet">[Code]</a>
-                    </div>
-                </div>
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href="https://openreview.net/forum?id=GMgHyUPrXa"><img src="./ISTA.png" alt="ISTA"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                                    A Design Space Study for LISTA and Beyond
-                                </a>
-                        </div>
-                        <div class="authors">
-                            Tianjian Meng*,
-                            Xiaohan Chen*,
-                            <me>Yifan Jiang</me>,
-                            Zhangyang Wang
-                        </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>ICLR 2021</i></a></div>
-                        <a href="https://openreview.net/forum?id=GMgHyUPrXa">[Paper]</a>
-                        <a href="https://github.com/google-research/google-research/tree/master/lista_design_space">[Code]</a>
-                    </div>
-                </div>
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href="https://arxiv.org/abs/1908.03835"><img src="./AutoGAN.png" alt="AutoGAN"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                                    AutoGAN: Neural Architecture Search Meets Generative Adversarial Networks
-                                </a>
-                        </div>
-                        <div class="authors">
-                            Xinyu Gong, Shiyu Chang, <me>Yifan Jiang</me>, Zhangyang Wang
-                        </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>ICCV 2019</i></a></div>
-                        <a href="https://arxiv.org/abs/1908.03835">[Paper]</a>
-                        <a href="https://github.com/TAMU-VITA/AutoGAN">[Code]</a>
-                        </br>
-                        <img src="https://img.shields.io/github/stars/VITA-group/AutoGAN?style=social"></img>
-                    </div>
-                </div>
-                <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href=""><img src="./EnlightenGAN.png" alt="EnlightenGAN"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                              EnlightenGAN: Deep Light Enhancement without Paired Supervision
+                        <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                            <div>
+                                <a>
+                                Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond
                             </a>
+                            </div>
+                            <div class="authors">
+                                Xi Ouyang, Yu Cheng,
+                                <me>Yifan Jiang</me>, Chun-Liang Li, Pan Zhou
+                            </div>
+                            <div><i>arxiv preprint</i></div>
+                            <a href="https://github.com/yueruchen/Pedestrian-Synthesis-GAN">[Code]</a>
+                            <a href="https://arxiv.org/abs/1804.02047">[Paper]</a>
                         </div>
-                        <div class="authors">
-                            <me>Yifan Jiang</me>, Xinyu Gong, Ding Liu, Yu Cheng, Chen Fang, Xiaohui Shen, Jianchao Yang, Pan Zhou, Zhangyang Wang
-                        </div>
-                        <div><a style="font-size: 14px; font-weight: bold"><i>IEEE Transaction on Image Processing (TIP)</i></a></div>
-                        <a href="https://github.com/yueruchen/EnlightenGAN">[Code]</a>
-                        <a href="https://arxiv.org/abs/1906.06972">[Paper]</a>
-                        </br>
-                        <img src="https://img.shields.io/github/stars/VITA-group/EnlightenGAN?style=social"></img>
                     </div>
                 </div>
-                <!-- <div class="row align-items-center section-item">
-                    <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                        <div class="figure">
-                            <a href="https://arxiv.org/abs/1804.02047"><img src="./D.png" alt="PS-GAN"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                        <div>
-                            <a>
-                              Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond
-                          </a>
-                        </div>
-                        <div class="authors">
-                            Xi Ouyang, Yu Cheng,
-                            <me>Yifan Jiang</me>, Chun-Liang Li, Pan Zhou
-                        </div>
-                        <div><i>arxiv preprint</i></div>
-                        <a href="https://github.com/yueruchen/Pedestrian-Synthesis-GAN">[Code]</a>
-                        <a href="https://arxiv.org/abs/1804.02047">[Paper]</a>
-                    </div>
-                </div> -->
+
             </div>
         </div>
     </br>
@@ -656,8 +698,231 @@
     </div>
 
 
-    <script src="./jquery-3.3.1.slim.min.js"></script>
-    <script src="./bootstrap.min.js"></script>
+<script src="./jquery-3.3.1.slim.min.js"></script>
+<script src="./tether.min.js"></script>
+<script src="./bootstrap.min.js"></script>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script type="text/javascript">
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+var allPublications = null;
+
+function publicationBySelected() {
+    // var a = $("#publication-by-selected")
+    // if (a.hasClass("activated")) {
+    //     return ;
+    // }
+    // alert("s");
+    // $("#main-pub-container .subtitle a").removeClass("activated");
+    // $("#main-pub-container .subtitle-aux a").removeClass("activated");
+    // a.addClass("activated");
+    $("#main-pub-card-container").html("");
+    // document.getElementById('main-pub-card-container').innerHTML = "";
+    for (var pubId = 0; pubId < allPublications.length; pubId++) {
+        var pub = $(allPublications[pubId]);
+        if (pub.data("selected") == true) {
+            $("#main-pub-card-container").append(pub);
+        }
+    }
+}
+
+function publicationByDate() {
+    var a = $("#publication-by-date")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+
+    $("#main-pub-container .subtitle a").removeClass("activated");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated");
+    a.addClass("activated");
+
+    $("#main-pub-card-container").html("");
+    for (var pubId = 0; pubId < allPublications.length; pubId++) {
+        if (pubId == 0 || $(allPublications[pubId-1]).data("year") != $(allPublications[pubId]).data("year")) {
+            var year = $(allPublications[pubId]).data("year");
+            $("#main-pub-card-container").append($("<h5 id='year-" + year.toString() + "'>" + year.toString() + "</h5>"));
+        }
+        $("#main-pub-card-container").append(allPublications[pubId]);
+    }
+}
+
+function publicationByTopicInner() {
+    var a = $("#publication-by-topic")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+    $("#main-pub-container .subtitle a").removeClass("activated");
+    a.addClass("activated");
+
+    $("#main-pub-card-container").html("");
+    for (var topicId in allTopics) {
+        var topic = allTopics[topicId].name;
+        var topicTitle = allTopics[topicId].title;
+        // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
+        $("#main-pub-card-container").append($("<h5 id='topic-" + topic + "'>" + topicTitle + "</h5>"));
+        for (var pubId = 0; pubId < allPublications.length; pubId++) {
+            var pub = $(allPublications[pubId]);
+            if (pub.data("topic").indexOf(topic) != -1) {
+                $("#main-pub-card-container").append(pub);
+            }
+        }
+    }
+}
+
+function publicationByTopicSpecificInner(a) {
+    if ($(a).hasClass("activated")) {
+        return false;
+    }
+
+    $("#container-fluid .subtitle-aux a").removeClass("activated");
+    $(a).addClass("activated");
+}
+
+function publicationByTopic() {
+    publicationByTopicInner();
+    publicationByTopicSpecificInner($("#main-pub-container .subtitle-aux a:first"));
+    return true;
+}
+
+function publicationByTopicSpecific(a) {
+    publicationByTopicInner();
+    publicationByTopicSpecificInner(a);
+
+    var hash = a.hash;
+    $(hash).prop('id', hash.substr(1) + '-noscroll');
+    window.location.hash = hash;
+    $(hash + '-noscroll').prop('id', hash.substr(1));
+
+    if (!$(hash).isInViewport()) {
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 1000, function(){
+        });
+    }
+
+    return false;
+}
+
+$(function() {
+    getRealSize = function(bgImg) {
+        var img = new Image();
+        img.src = bgImg.attr("src");
+        var width = img.width,
+            height = img.height;
+        return {
+            width: width,
+            height: height
+        }
+    };
+
+    getRealWindowSize = function() {
+        var winWidth = null,
+            winHeight = null;
+        if (window.innerWidth) winWidth = window.innerWidth;
+        else if ((document.body) && (document.body.clientWidth)) winWidth = document.body.clientWidth;
+        if (window.innerHeight) winHeight = window.innerHeight;
+        else if ((document.body) && (document.body.clientHeight)) winHeight = document.body.clientHeight;
+        if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
+            winHeight = document.documentElement.clientHeight;
+            winWidth = document.documentElement.clientWidth
+        }
+        return {
+            width: winWidth,
+            height: winHeight
+        }
+    };
+
+    fullBg = function() {
+        var bgImg = $("#background");
+        var mainContainer = $("#main");
+        var firstFire = null;
+
+        function resizeImg() {
+            var realSize = getRealSize(bgImg);
+            var imgWidth = realSize.width;
+            var imgHeight = realSize.height;
+
+            if (imgWidth == 0 || imgHeight == 0) {
+                setTimeout(function() {
+                    resizeImg();
+                }, 200);
+            }
+
+            console.log(realSize);
+            var realWinSize = getRealWindowSize();
+            var winWidth = realWinSize.width;
+            var winHeight = realWinSize.height;
+            var widthRatio = winWidth / imgWidth;
+            var heightRatio = winHeight / imgHeight;
+            console.log(realWinSize);
+            if (widthRatio > heightRatio) {
+                bgImg.width(imgWidth * widthRatio + 'px').height(imgHeight * widthRatio + 'px').css({'top':
+                    -(imgHeight * widthRatio - winHeight) / 10 * 5 + 'px', 'left': '0'})
+            } else {
+                bgImg.width(imgWidth * heightRatio + 'px').height(imgHeight * heightRatio + 'px').css({'left':
+                    -(imgWidth * heightRatio - winWidth) / 10 * 3 + 'px', 'top': '0'})
+            }
+            // mainContainer.css({
+            //     width: winWidth,
+            //     height: winHeight
+            // });
+        }
+
+        resizeImg();
+        window.onresize = function() {
+            if (firstFire === null) {
+                firstFire = setTimeout(function() {
+                    resizeImg();
+                    firstFire = null
+                }, 100)
+            }
+        }
+    };
+
+    targetColor = $("#main-content-container .col-info .name").css("color");
+    animatedLink = function(speed) {
+        $("#main-content-container .col-link li").hover(function() {
+            $(this).find('.icon').animate({
+                color: targetColor,
+                borderColor: targetColor
+            }, speed);
+            $(this).find('.caption').animate({
+                color: targetColor
+            })
+        }, function() {
+            $(this).find('.icon').animate({
+                borderColor: '#cccccc',
+                color: '#cccccc'
+            }, speed);
+            $(this).find('.caption').animate({
+                color: '#cccccc'
+            })
+        })
+    };
+
+    fullBg();
+    animatedLink(400);
+
+    allPublications = $("#main-pub-card-container .pub-card");
+    allTopicsLink = $("#main-pub-container .subtitle-aux a");
+    allTopics = [];
+    for (var topicId = 0; topicId < allTopicsLink.length; topicId++) {
+        allTopics.push({name: $(allTopicsLink[topicId]).data("topic"), title: $(allTopicsLink[topicId]).html()});
+    }
+
+    $("#publication-by-selected").click();
+    // $("#publication-by-date").click();
+    $("#main-pub-card-container").removeClass("hide");
+});
+</script>
+
 
 
 </body>
