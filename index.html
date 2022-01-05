@@ -383,7 +383,7 @@
                     )
                     </h5>
                     <p class="subtitle-aux"><span class="bold">Topics:</span>
-                        <a href="https://yifanjiang.net/#edu" onclick="return publicationByTopicSpecific(this)" data-topic="Image-Synthesis-and-Processing" class="">Image Synthesis and Processing</a> /
+                        <a href="https://yifanjiang.net/#topic-Image-Synthesis-and-Processing" onclick="return publicationByTopicSpecific(this)" data-topic="Image-Synthesis-and-Processing" class="">Image Synthesis and Processing</a> /
                         <a href="https://yifanjiang.net/#topic-AutoML-and-Efficiency" onclick="return publicationByTopicSpecific(this)" data-topic="AutoML-and-Efficiency" class="">AutoML and Efficiency</a> /
                         <span class="note">(*: indicates equal contribution.)</span>
                     </p>
@@ -766,7 +766,8 @@ function publicationByTopicInner() {
         var topic = allTopics[topicId].name;
         var topicTitle = allTopics[topicId].title;
         // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
-        $("#main-pub-card-container").append($("<h5 id='topic-" + topic + "'>" + topicTitle + "</h5>"));
+        $("#main-pub-card-container").append($("<h5 style='height=100px'" + " id='topic-"  + topic + "'>" + topicTitle + "</h5>"));
+        $("#main-pub-card-container").append($("<h5 " + topicTitle + "</h5>"));
         for (var pubId = 0; pubId < allPublications.length; pubId++) {
             var pub = $(allPublications[pubId]);
             if (pub.data("topic").indexOf(topic) != -1) {
