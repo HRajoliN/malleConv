@@ -383,7 +383,7 @@
                     )
                     </h5>
                     <p class="subtitle-aux"><span class="bold">Topics:</span>
-                        <a href="https://yifanjiang.net/#topic-Image-Synthesis-and-Processing" onclick="return publicationByTopicSpecific(this)" data-topic="Image-Synthesis-and-Processing" class="">Image Synthesis and Processing</a> /
+                        <a href="https://yifanjiang.net/#Image-Synthesis-and-Processing" onclick="return publicationByTopicSpecific(this)" data-topic="Image-Synthesis-and-Processing" class="">Image Synthesis and Processing</a> /
                         <a href="https://yifanjiang.net/#topic-AutoML-and-Efficiency" onclick="return publicationByTopicSpecific(this)" data-topic="AutoML-and-Efficiency" class="">AutoML and Efficiency</a> /
                         <span class="note">(*: indicates equal contribution.)</span>
                     </p>
@@ -414,6 +414,33 @@
                                 <div><a style="font-size: 14px; font-weight: bold"><i>arxiv preview</i></a></div>
                                 <a href="https://arxiv.org/pdf/2201.00392.pdf">[Paper]</a>
                                 <a href="https://yifanjiang.net/MalleConv.html">[Project]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="AutoML-and-Efficiency" data-year="2022" data-selected="false">
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://arxiv.org/abs/2112.04710"><img src="./AutoX3D.png" alt="AutoX3D"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                        Auto-X3D: Ultra-Efficient Video Understanding via Finer-Grained Neural Architecture Search
+                                        </a>
+                                </div>
+                                <div class="authors">
+                                    <me>Yifan Jiang*</me>,
+                                    Xinyu Gong*,
+                                    Junru Wu, 
+                                    Humphery Shi, 
+                                    Zhicheng Yan,
+                                    Zhangyang Wang
+                                </div>
+                                <div><a style="font-size: 14px; font-weight: bold"><i>WACV'2022</i></a></div>
+                                <a href="https://arxiv.org/abs/2112.04710">[Paper]</a>
                             </div>
                         </div>
                     </div>
@@ -766,8 +793,9 @@ function publicationByTopicInner() {
         var topic = allTopics[topicId].name;
         var topicTitle = allTopics[topicId].title;
         // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
-        $("#main-pub-card-container").append($("<h5 style='height=100px'" + " id='topic-"  + topic + "'>" + "</h5>"));
-        $("#main-pub-card-container").append($("<h5 style='height=100px'>" + topicTitle + "</h5>"));
+        $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
+        $("#main-pub-card-container").append($("<div style='margin-top: 70px; font-size: 22px; font-weight: bold'>" + "</div>"));
+        $("#main-pub-card-container").append($("<h5>" + topicTitle  + "</h5>"));
         for (var pubId = 0; pubId < allPublications.length; pubId++) {
             var pub = $(allPublications[pubId]);
             if (pub.data("topic").indexOf(topic) != -1) {
