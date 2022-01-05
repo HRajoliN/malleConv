@@ -766,7 +766,7 @@ function publicationByTopicInner() {
         var topic = allTopics[topicId].name;
         var topicTitle = allTopics[topicId].title;
         // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
-        $("#main-pub-card-container").append($("<h5 style='height=100px'" + " id='topic-"  + topic + "'>" + topicTitle + "</h5>"));
+        $("#main-pub-card-container").append($("<h5 style='height=100px'" + " id='topic-"  + topic + "'>" + "</h5>"));
         $("#main-pub-card-container").append($("<h5 style='height=100px'>" + topicTitle + "</h5>"));
         for (var pubId = 0; pubId < allPublications.length; pubId++) {
             var pub = $(allPublications[pubId]);
