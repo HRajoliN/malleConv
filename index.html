@@ -616,32 +616,32 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
 
-                <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2019" data-selected="false"></div>
-                    <div class="row align-items-center section-item">
-                        <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
-                            <div class="figure">
-                                <a href="https://arxiv.org/abs/1804.02047"><img src="./D.png" alt="PS-GAN"></a>
+                    <div class="pub-card" data-topic="Image-Synthesis-and-Processing" data-year="2019" data-selected="false"></div>
+                        <div class="row align-items-center section-item">
+                            <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
+                                <div class="figure">
+                                    <a href="https://arxiv.org/abs/1804.02047"><img src="./D.png" alt="PS-GAN"></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
-                            <div>
-                                <a>
-                                Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond
-                            </a>
+                            <div class="col-xs-12 col-md-9 col-lg-8 col-wrapper">
+                                <div>
+                                    <a>
+                                    Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond
+                                </a>
+                                </div>
+                                <div class="authors">
+                                    Xi Ouyang, Yu Cheng,
+                                    <me>Yifan Jiang</me>, Chun-Liang Li, Pan Zhou
+                                </div>
+                                <div><i>arxiv preprint</i></div>
+                                <a href="https://github.com/yueruchen/Pedestrian-Synthesis-GAN">[Code]</a>
+                                <a href="https://arxiv.org/abs/1804.02047">[Paper]</a>
                             </div>
-                            <div class="authors">
-                                Xi Ouyang, Yu Cheng,
-                                <me>Yifan Jiang</me>, Chun-Liang Li, Pan Zhou
-                            </div>
-                            <div><i>arxiv preprint</i></div>
-                            <a href="https://github.com/yueruchen/Pedestrian-Synthesis-GAN">[Code]</a>
-                            <a href="https://arxiv.org/abs/1804.02047">[Paper]</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </br>
@@ -767,7 +767,7 @@ function publicationByTopicInner() {
         var topicTitle = allTopics[topicId].title;
         // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
         $("#main-pub-card-container").append($("<h5 style='height=100px'" + " id='topic-"  + topic + "'>" + topicTitle + "</h5>"));
-        $("#main-pub-card-container").append($("<h5 " + topicTitle + "</h5>"));
+        $("#main-pub-card-container").append($("<h5 style='height=100px'>" + topicTitle + "</h5>"));
         for (var pubId = 0; pubId < allPublications.length; pubId++) {
             var pub = $(allPublications[pubId]);
             if (pub.data("topic").indexOf(topic) != -1) {
