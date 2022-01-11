@@ -308,4 +308,27 @@ nav {
     color: var(--light-gray)
 }
 
-#main-pub-card-container {}
+
+#main-pub-container .subtitle a.activated {
+    color: #333333
+}
+
+#main-pub-container .subtitle a.activated:focus,
+#main-pub-container .subtitle a.activated:hover {
+    text-decoration: none;
+    cursor: initial
+}
+
+#main-pub-container .subtitle-aux {
+    font-size: 1rem
+}
+
+#main-pub-container .subtitle-aux a.activated {
+    color: #333333
+}
+
+#main-pub-container .subtitle-aux a.activated:focus,
+#main-pub-container .subtitle-aux a.activated:hover {
+    text-decoration: none;
+    cursor: initial
+}
