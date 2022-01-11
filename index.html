@@ -744,14 +744,14 @@ $.fn.isInViewport = function() {
 var allPublications = null;
 
 function publicationBySelected() {
-    // var a = $("#publication-by-selected")
-    // if (a.hasClass("activated")) {
-    //     return ;
-    // }
+    var a = $("#publication-by-selected")
+    if (a.hasClass("activated")) {
+        return ;
+    }
     // alert("s");
-    // $("#main-pub-container .subtitle a").removeClass("activated");
-    // $("#main-pub-container .subtitle-aux a").removeClass("activated");
-    // a.addClass("activated");
+    $("#main-pub-container .subtitle a").removeClass("activated");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated");
+    a.addClass("activated");
     $("#main-pub-card-container").html("");
     // document.getElementById('main-pub-card-container').innerHTML = "";
     for (var pubId = 0; pubId < allPublications.length; pubId++) {
@@ -820,7 +820,7 @@ function publicationByTopicSpecificInner(a) {
         return false;
     }
 
-    $("#container-fluid .subtitle-aux a").removeClass("activated");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated");
     $(a).addClass("activated");
 }
 
