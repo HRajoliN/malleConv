@@ -797,13 +797,13 @@ function publicationByTopicInner() {
         // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
         
         if (topicId == 0) {
-            $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
             $("#main-pub-card-container").append($("<div style='margin-top: 30px; font-size: 22px; font-weight: bold'>" + "</div>"));
+            $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
             $("#main-pub-card-container").append($("<h4>" + topicTitle  + "</h4>"));
         }
         else{
-            $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
             $("#main-pub-card-container").append($("<div style='margin-top: 70px; font-size: 22px; font-weight: bold'>" + "</div>"));
+            $("#main-pub-card-container").append($("<h5" + " id='topic-"  + topic + "'>" + "</h5>"));
             $("#main-pub-card-container").append($("<h4>" + topicTitle  + "</h4>"));
         }
         for (var pubId = 0; pubId < allPublications.length; pubId++) {
