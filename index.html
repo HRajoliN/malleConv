@@ -647,7 +647,7 @@
                     </div>
                 
 
-                    <div class="pub-card" data-topic="Generative-Model" data-year="2019" data-selected="false"></div>
+                    <div class="pub-card" data-topic="Generative-Model" data-year="2019" data-selected="false">
                         <div class="row align-items-center section-item">
                             <div class="col-xs-12 col-md-3 col-lg-4 col-wrapper">
                                 <div class="figure">
@@ -669,6 +669,7 @@
                                 <a href="https://arxiv.org/abs/1804.02047">[Paper]</a>
                             </div>
                         </div>
+                    
                     </div>
                 </div>
             </div>
@@ -745,9 +746,9 @@ var allPublications = null;
 
 function publicationBySelected() {
     var a = $("#publication-by-selected")
-    if (a.hasClass("activated")) {
-        return ;
-    }
+    // if (a.hasClass("activated")) {
+    //     return ;
+    // }
     // alert("s");
     $("#main-pub-container .subtitle a").removeClass("activated");
     $("#main-pub-container .subtitle-aux a").removeClass("activated");
