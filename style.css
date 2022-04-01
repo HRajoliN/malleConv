@@ -10,9 +10,9 @@ body {
     /* font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif; */
     font-family: "LibreFrank",Arial,Helvetica,sans-serif;
     font-size: 14px;
-    line-height: 1.8em;
+    line-height: 180%;
     color: #000;
-    font-weight: 100;
+    font-weight: 400;
     background: #fff;
     margin-top: 50px
 }
@@ -185,7 +185,7 @@ nav {
     color: #000;
     font-weight: 600;
     font-family: "Open Sans", Segoe, "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Avenir", "Seravek", "Ubuntu", "DejaVu Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
-    font-size: 18px
+    font-size: 14px
 }
 
 .pub-wrapper .title a:hover {
