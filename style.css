@@ -310,12 +310,13 @@ nav {
 
 
 #main-pub-container .subtitle a.activated {
-    color: #333333
+    color: #333333;
+    text-decoration:underline;
 }
 
 #main-pub-container .subtitle a.activated:focus,
 #main-pub-container .subtitle a.activated:hover {
-    text-decoration: none;
+    /* text-decoration: none; */
     cursor: initial
 }
 
