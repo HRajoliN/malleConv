@@ -218,11 +218,11 @@ nav {
     width: 100%
 }
 
-@media(max-width:767.98px) {
+/* @media(max-width:767.98px) {
     .pub-wrapper .figure {
         display: none
     }
-}
+} */
 
 .exp-wrapper .title a {
     font-size: 18px;
