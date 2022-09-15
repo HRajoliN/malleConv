@@ -218,11 +218,11 @@ nav {
     width: 100%
 }
 
-/* @media(max-width:767.98px) {
+@media(max-width:767.98px) {
     .pub-wrapper .figure {
-        display: none
+        display: block
     }
-} */
+}
 
 .exp-wrapper .title a {
     font-size: 18px;
@@ -242,7 +242,7 @@ nav {
 .exp-wrapper .figure {
     text-align: center;
     margin: auto;
-    display: none
+    display: block
 }
 
 .exp-wrapper .fig-square .figure {
@@ -271,7 +271,7 @@ nav {
 
 @media(min-width:576px) and (max-width:991.98px) {
     .exp-wrapper .fig-wide {
-        display: none
+        display: block
     }
     .exp-wrapper .fig-square {
         display: block
@@ -283,7 +283,7 @@ nav {
         display: block
     }
     .exp-wrapper .fig-square {
-        display: none
+        display: block
     }
 }
 
@@ -300,7 +300,7 @@ nav {
 
 @media(max-width:767.98px) {
     .exp-wrapper .location {
-        display: none
+        display: block
     }
 }
 
