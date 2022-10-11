@@ -121,7 +121,8 @@ nav {
 
 @media(min-width:576px) {
     .home-wrapper .picture img {
-        max-width: 200px
+        /* max-width: 200px */
+        max-height: 300px
     }
 }
 
